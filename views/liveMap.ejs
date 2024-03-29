@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+<body>
+<%- include('partials/_header.ejs') %>
+<main role="main" class="container mt-4">
+  <div id="map" style="height: 500px; width: 100%;"></div> <!-- Ensured the map container has a defined width -->
+</main>
+<script src="/js/liveMap.js"></script>
+<%- include('partials/_footer.ejs') %>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-Z8JcHdV+YVQjBjIc9xlJJ7g/Nq8P9W/e23Qd6z9BJEUJlmU5fYZpcUfjO0lS4vcF" crossorigin="anonymous">
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-Z8JcHdV+YVQjBjIc9xlJJ7g/Nq8P9W/e23Qd6z9BJEUJlmU5fYZpcUfjO0lS4vcF" crossorigin="anonymous"></script>
+</body>
+</html>

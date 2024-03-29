@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+  <body>
+<%- include('partials/_header.ejs') %>
+    <main role="main">
+      <div class="container mt-5">
+        <h2>Upload Your Content</h2>
+        <form action="/user/upload" method="POST" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="content" class="form-label">Select file to upload:</label>
+            <input type="file" name="content" required class="form-control">
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Upload</button>
+          </div>
+        </form>
+        <% if (locals.errorMsg) { %>
+          <div class="alert alert-danger" role="alert">
+            <%= errorMsg %>
+          </div>
+        <% } %>
+      </div>
+    </main>
+  </body>
+<%- include('partials/_footer.ejs') %>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/_head.ejs') %>
+<body>
+<%- include('partials/_header.ejs') %>
+<main role="main" class="container mt-4">
+  <h2>Aircraft Details</h2>
+  <% if (aircraft) { %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= aircraft.aircraftType %></h5>
+        <p class="card-text">Origin: <%= aircraft.origin %></p>
+        <p class="card-text">Destination: <%= aircraft.destination %></p>
+        <p class="card-text">Parking Stand: <%= aircraft.parkingStand %></p>
+        <p class="card-text">Apron: <%= aircraft.apron %></p>
+      </div>
+    </div>
+    <div id="userContent"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        fetchUserContent('<%= aircraft._id %>').then(data => {
+          if (data && data.length > 0) {
+            let contentHtml = '<h3>User Uploaded Content</h3>';
+            data.forEach(content => {
+              contentHtml += `<div><p>${content.description}</p><img src="${content.url}" alt="User content" /></div>`;
+            });
+            document.getElementById('userContent').innerHTML = contentHtml;
+          } else {
+            document.getElementById('userContent').innerHTML = '<p>No user uploaded content available.</p>';
+          }
+        }).catch(error => {
+          console.error('Fetching user content failed:', error.message, error.stack);
+          document.getElementById('userContent').innerHTML = 'Failed to load user uploaded content.';
+        });
+      });
+    </script>
+  <% } else { %>
+    <p>No aircraft details available.</p>
+  <% } %>
+</main>
+<%- include('partials/_footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* Custom styles for EGPK_Overwatch application */
+
+#map {
+  height: 500px; /* Height is already set, reiterating for clarity */
+  width: 100%; /* Ensuring the map container has a defined width */
+}
