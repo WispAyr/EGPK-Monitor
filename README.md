@@ -1,6 +1,6 @@
-# EGPK_Overwatch
+# EGPK Monitor
 
-EGPK_Overwatch is a comprehensive application designed to enhance the experience of aircraft spotters at EGPK Airport (Prestwick Airport) in Scotland. It provides real-time information on aircraft movements, weather updates, NOTAMs, and spotting locations, all through a clean and engaging user interface. The app includes various subscription tiers, including a Free trial, Basic, and Enhanced options, catering to different user needs.
+EGPK monitor is a comprehensive application designed to enhance the experience of aircraft spotters at EGPK Airport (Prestwick Airport) in Scotland. It provides real-time information on aircraft movements, weather updates, NOTAMs, and spotting locations, all through a clean and engaging user interface. The app includes various subscription tiers, including a Free trial, Basic, and Enhanced options, catering to different user needs.
 
 ## Overview
 
